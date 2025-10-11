@@ -1,0 +1,24 @@
+In this paper we present some experiments on the use of a probabilistic model to tag English text,
+i.e. to assign to each word the correct tag (part of speech) in the context of the sentence. The main
+novelty of these experiments is the use of untagged text in the training of the model. We have
+used a simple triclass Marlcov model and are looking for the best way to estimate the parameters
+of this model, depending on the kind and amount of training data provided. Two approaches in
+particular are compared and combined:using text that has been tagged by hand and computing relative frequency counts,
+using text without tags and training the model as a hidden Markov process,
+according to a Maximum Likelihood principle.
+Experiments show that the best training is obtained by using as much tagged text as possible. They
+also show that Maximum Likelihood training, the procedure that is routinely used to estimate
+hidden Markov models parameters from training data, will not necessarily improve the tagging
+accuracy. In fact, it will generally degrade this accuracy, except when only a limited amount of
+hand-tagged text is available.
+1. Introduction
+A lot of effort has been devoted in the past to the problem of tagging text, i.e. assigning
+to each word the correct tag (part of speech) in the context of the sentence. Two main
+approaches have generally been considered:
+rule-based (Klein and Simmons 1963; Brodda 1982; Paulussen and
+Martin 1992; Brill et al. 1990)
+probabilistic (Bahl and Mercer 1976; Debili 1977; Stolz, Tannenbaum, and
+Carstensen 1965; Marshall 1983; Leech, Garside, and Atwell 1983;
+Derouault and Merialdo 1986; DeRose 1988; Church 1989; Beale 1988;
+Marcken 1990; Merialdo 1991; Cutting et al. 1992).
+More recently, some work has been proposed using neural network
